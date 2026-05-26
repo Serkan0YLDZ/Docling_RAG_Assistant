@@ -1,0 +1,29 @@
+:root {
+  --color-primary: #004ac6;
+  --color-primary-container: #2563eb;
+  --color-on-primary: #ffffff;
+  --color-secondary: #515f74;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-container: #f8fafc;
+  --color-surface-container-low: #ffffff;
+  --color-on-surface: #131b2e;
+  --color-on-surface-variant: #64748b;
+  --color-outline: #cbd5e1;
+  --color-outline-variant: #e2e8f0;
+  --color-error: #ba1a1a;
+  --color-citation-bg: rgb(0 74 198 / 0.05);
+  --color-citation-border: rgb(0 74 198 / 0.2);
+  --color-highlight: rgb(0 74 198 / 0.1);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --sidebar-width: 300px;
+  --sidebar-collapsed-width: 44px;
+  --source-width: 340px;
+  --container-max: 1440px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  user-select: none;
+}

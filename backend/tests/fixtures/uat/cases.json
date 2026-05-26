@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "id": "TC_UAT_01",
+      "type": "out_of_scope",
+      "query": "Mars kolonisi icin ayrilan butce ne kadar?",
+      "expect_no_llm": true,
+      "expect_message_contains": "bulunmamaktadır"
+    },
+    {
+      "id": "TC_UAT_02",
+      "type": "in_scope",
+      "query": "Ar-Ge yatirimlari sirketin en buyuk harcama kalemidir",
+      "expect_chunk_contains": ["Ar-Ge yatirimlari", "harcama kalemidir"],
+      "min_similarity": 0.65
+    },
+    {
+      "id": "TC_UAT_03",
+      "type": "retrieval_precision",
+      "query": "Ar-Ge yatirimlari sirketin en buyuk harcama kalemidir",
+      "relevant_keywords": ["Ar-Ge", "harcama"],
+      "k": 5,
+      "min_precision": 0.2
+    },
+    {
+      "id": "TC_UAT_04",
+      "type": "retrieval_recall",
+      "query": "yuzde 12 artti operasyonel giderler",
+      "relevant_keywords": ["yuzde 12", "Operasyonel"],
+      "k": 5,
+      "min_recall": 0.2
+    },
+    {
+      "id": "TC_UAT_05",
+      "type": "faithfulness_heuristic",
+      "query": "Ar-Ge yatirimlari sirketin en buyuk harcama kalemidir mi?",
+      "forbidden_terms": ["Mars", "koloni", "Venüs"],
+      "required_terms_from_context": true
+    },
+    {
+      "id": "TC_UAT_06",
+      "type": "answer_relevancy",
+      "query": "Ar-Ge yatirimlari sirketin en buyuk harcama kalemidir mi?",
+      "expect_not_no_context": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Ar-Ge Raporu 2024
+
+Ar-Ge yatirimlari sirketin en buyuk harcama kalemidir. Yillik butce 12 milyon TL olarak planlandi.
+
+## Finansal Ozet
+
+Urun gelistirme maliyetleri gecen yila gore yuzde 12 artti. Operasyonel giderler sabit kaldi.
+
+## Teknoloji Altyapisi
+
+Yapay zeka altyapisi icin yeni sunucular satin alindi. Veri merkezi kapasitesi iki katina cikarildi.

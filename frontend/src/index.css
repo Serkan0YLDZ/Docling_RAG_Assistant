@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+@import './theme/tokens.css';
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-primary: var(--color-primary);
+  --color-surface-container: var(--color-surface-container);
+  --color-outline-variant: var(--color-outline-variant);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-background);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.dashboard-layout {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: 24px;
+  column-gap: 0;
+  row-gap: 0;
+  box-sizing: border-box;
+  transition: grid-template-columns 0.25s ease;
+}
+
+.sidebar-left {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+}
+
+.drawer-right {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+}
+
+.drawer-right--spaced {
+  padding-left: 24px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .dashboard-layout .sidebar-left,
+  .dashboard-layout .drawer-right {
+    display: none;
+  }
+  .dashboard-layout.show-sidebar .sidebar-left,
+  .dashboard-layout.show-source .drawer-right {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    max-width: 100%;
+  }
+}

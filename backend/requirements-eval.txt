@@ -1,0 +1,3 @@
+# Katman B — RAGAS değerlendirme (opsiyonel; ana requirements.txt'e dahil değil)
+ragas>=0.2.0
+datasets>=2.14.0

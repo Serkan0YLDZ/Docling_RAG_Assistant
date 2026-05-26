@@ -1,0 +1,12 @@
+flask
+flask-cors
+python-dotenv
+docling
+# macOS için — Apple Vision OCR (Docling OcrAutoOptions → ocrmac); Linux/Windows'ta satır yok sayılır
+ocrmac; sys_platform == 'darwin'
+chromadb
+google-genai
+pytest
+pytest-cov
+pytest-mock
+werkzeug
